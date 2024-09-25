@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
@@ -27,12 +27,23 @@
         <button onclick="calcularmedia()">Calcular</button>
         <button onclick="limpar()">Limpar</button>
         <br>
-        <label for="text">Média:</label>
+        <label for="text" id="media">Média:</label>
+        <!--<input type="text" name="media" id="media">-->
     </main>
 
     <script>
         function calcularmedia(){
-            var primeiranota = Number (document.getElementById"primeiranota").value;
+            var primeiranota = Number (document.getElementById("primeiranota").value);
+            var segundanota = Number (document.getElementById("segundanota").value);
+            var resultado = (primeiranota * 0.3) + (segundanota * 0.7);
+
+            document.getElementById("media").innerText += resultado;
+        }
+
+        function limpar(){
+            document.getElementById("primeiranota").value = ""
+            document.getElementById("segundanota").value = ""
+            document.getElementById("media").innerHTML = "Média:"
 
         }
     </script>

@@ -15,14 +15,38 @@
             <li><a href="index2.html">Exercício2</li></a>
             <li><a href="index3.html">Exercício3</li></a>
             <li><a href="index4.html">Exercício4</li></a>
+            <li><a href="index5.html">Exercício5</a></li>
+            <li><a href="index6.html">Exercício6</a></li>
+            <li><a href="index7.html">Exercício7</a></li>
         </ol>
     </header>
 
     <main>
-
-
+        <label for="text">Ano de Nascimento:</label>
+        <input type="text" name="anonasc" id="anonasc">
+        <button onclick="calcular()">Calcular</button>
 
     </main>
     
+    <script>
+        function calcular(){
+            var anonasc = Number (document.getElementById("anonasc").value);
+            var idade = 2024 - anonasc;
+            var meses = idade * 12; 
+            var semanas = idade * 52;
+            var dias = idade * 365;
+            var horas = idade * 8760;
+            var minutos = idade * 525.600;
+            var 2050 = idade + 26;
+            console.log({"idade:":varidade );
+            console.log({"meses:":varMeses });
+            console.log({"semanas:":varSemanas });
+            console.log({"dias:":varDias });
+            console.log({"horas:":varHoras });
+            console.log({"minutos:":varMinutos });
+            console.log({"idade em 2050:":var2050});
+
+        }
+    </script>
 </body>
 </html>

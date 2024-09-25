@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Exercícios</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h3>Lista de Exercícios</h3>
+        <h4>Luan Silva de Picoli</h4>
+        <ol>
+            <li><a href="index1.html">Exercício1</a></li>
+            <li><a href="index2.html">Exercício2</a></li>
+            <li><a href="index3.html">Exercício3</a></li>
+            <li><a href="index4.html">Exercício4</a></li>
+            <li><a href="index5.html">Exercício5</a></li>
+            <li><a href="index6.html">Exercício6</a></li>
+            <li><a href="index7.html">Exercício7</a></li>
+        </ol>
+    </header>
+
+    <main>
+        <label for="text">Valor por hora trabalhada:</label>
+        <input type="text" name="valorhora" id="valorhora">
+        <label for="text">Quantidade de refeições:</label>
+        <input type="text" name="refeicao" id="refeicao">
+        <button onclick="calcular()">Calcular</button>
+        <button onclick="limpar()">Limpar</button><br>
+        <label for="text" id="bruto">Salário bruto: </label><br>
+        <label for="text" id="desref">Desconto da refeição: </label><br>
+        <label for="text" id="liquido">Salário líquido (62 Hrs): </label>
+
+    </main>
+
+        <script>
+            function calcular(){
+                var valorhora = Number (document.getElementById("valorhora").value);
+                var refeicao = Number (document.getElementById("refeicao").value);
+                var bruto = (40 * valorhora) + (22 * (3 * valorhora));
+                document.getElementById("bruto").innerText += bruto;
+                var desconto = refeicao * 1.5
+                document.getElementById("desref").innerText += desconto;
+                var liquido = bruto - desconto;
+                document.getElementById("liquido").innerText += liquido;
+            }
+
+            function limpar(){
+                document.getElementById("valorhora").value = "";
+                document.getElementById("refeicao").value = "";
+                document.getElementById("bruto").innerText = "Salário bruto: ";
+                document.getElementById("desref"). innerText = "Desconto da refeição: ";
+                document.getElementById("liquido").innerText = "Salário líquido (62 Hrs):";
+            }
+        </script>
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Exercícios</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h3>Lista de Exercícios</h3>
+        <h4>Luan Silva de Picoli</h4>
+        <ol>
+            <li><a href="index1.html">Exercício1</a></li>
+            <li><a href="index2.html">Exercício2</a></li>
+            <li><a href="index3.html">Exercício3</a></li>
+            <li><a href="index4.html">Exercício4</a></li>
+            <li><a href="index5.html">Exercício5</a></li>
+            <li><a href="index6.html">Exercício6</a></li>
+            <li><a href="index7.html">Exercício7</a></li>
+        </ol>
+    </header>
+
+    <main>
+        <label for="text">Distância (Km)</label>
+        <input type="text" name="distancia" id="distancia"><br>
+        <label for="text">Volume (litros)</label>
+        <input type="text" name="volume" id="volume">
+        <button onclick="calcular()">Calcular</button>
+        <button onclick="limpar()">Limpar</button>
+        <label for="texy">Consumo Médio</label>
+        <input type="text" name="consumo" id="consumo" readonly>
+    </main>
+
+    <script>
+        function calcular(){
+            var distancia = Number (document.getElementById("distancia").value);
+            var volume = Number (document.getElementById("volume").value);
+            var consumo = distancia / volume;
+
+            document.getElementById("consumo").value = consumo;
+
+            }
+            
+        
+        function limpar(){
+             document.getElementById("consumo").value = "";
+             document.getElementById("distancia").value = "";
+             document.getElementById("volume").value = "";
+
+
+        }
+    </script>
+</body>
+
+</html>

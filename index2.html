@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Exercícios</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h3>Lista de Exercícios</h3>
+        <h4>Luan Silva de Picoli</h4>
+        <ol>
+            <li><a href="index1.html">Exercício1</li></a>
+            <li><a href="index2.html">Exercício2</li></a>
+            <li><a href="index3.html">Exercício3</li></a>
+            <li><a href="index4.html">Exercício4</li></a>
+        </ol>
+    </header>
+
+    <main>
+        <label for="text">Base:</label>
+        <input type="text" name="base" id="base">
+        <label for="text">Altura:</label>
+        <input type="text" name="altura" id="altura">
+        <br>
+        <button onclick="calculararea()">Calcular</button>
+        <button onclick="limpar()">limpar</button>
+        <br>
+        <label for="text">Área</label>
+        <input type="text" name="resultado" id="resultado" readonly>
+    </main>
+
+        <script>
+            function calculararea(){
+                var base = Number (document.getElementById("base").value);
+                var altura = Number(document.getElementById("altura").value);
+                var area = (base * altura) / 2;
+                document.getElementById("resultado").value = area;
+
+            }
+
+            function limpar(){
+                document.getElementById("resultado").value = ""
+                document.getElementById("altura").value = ""
+                document.getElementById("base").value = ""
+            }
+
+        </script>
+
+
+
+
+    
+    
+</body>
+</html>

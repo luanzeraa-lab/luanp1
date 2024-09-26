@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "../htmlprojects"
+		},
+		{
+			"path": "../../projeto entretenimento"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "javascriptsparanoobs"
+	}
+}

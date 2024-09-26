@@ -28,11 +28,25 @@
     </header>
 
     <main>
-
-
-
+        <label for="text">Número gerado:</label>
+        <input type="text" name="gerado" id="gerado" readonly>
+        <button onclick="gerar()">Gerar</button>
     </main>
 
+        <script>
+            function gerar(){
+            var gerado = document.getElementById('gerado');
+                gerado.value = Math.floor(1000 * Math.random());
+        }
+
+        if (gerado.value % 2  == 0){
+            alert ("par");
+        }else{
+            alert("impar");
+        }
+        </script>
+
+       
 </body>
 
 </html>

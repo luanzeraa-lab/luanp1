@@ -31,19 +31,16 @@
         <label for="text">Número gerado:</label>
         <input type="text" name="gerado" id="gerado" readonly>
         <button onclick="gerar()">Gerar</button>
+        <input type="text" name="numero" id="numero" readonly>
     </main>
 
         <script>
             function gerar(){
-            var gerado = document.getElementById('gerado');
-                gerado.value = Math.floor(1000 * Math.random());
-        }
-
-        if (gerado.value % 2  == 0){
-            alert ("par");
-        }else{
-            alert("impar");
-        }
+                const randomico = Math.floor(100 * Math.random());
+                const ParImpar = (randomico % 2 == 0 ? 'par' : 'impar')
+                document.getElementById('gerado').value = randomico
+                document.getElementById('numero').value = ` Numero é ${ParImpar}`
+            }
         </script>
 
        
